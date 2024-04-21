@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+
+.topBodyUrbanNewsSection{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 90%;
+    margin: 0 auto;
+}
+.topLeftUrbanNewsContainer{
+    padding: 20px;
+}
+.urbanNewsContainer{
+    margin: 20px 0px;
+    border-bottom: .5px solid silver;
+    border-left: .5px solid silver;
+    padding: 10px;
+    position: relative;
+}
+.urbanNewsContainer small{
+    color: red;
+    font-style: italic;
+}
+.urbanNewsContainer small h3{
+    font-weight: bold;
+}
+.urbanNewsCircle{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+}
+.urbanNewsCenterCardContainer{
+    background: silver;
+}
+.urbanNewsCenterContainer h1{
+    font-weight: bold;
+    padding: 20px;
+}
+.urbanNewsCenterHeadingImgContainer{
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.urbanNewsRightContainer{
+    padding: 20px;
+}
+
+.urbanNewsCardContainer{
+    display: grid;
+    grid-template-columns:80% 20%;
+    margin: 20px 0px;
+    border-bottom: 1px solid silver;
+    padding: 10px 0px;
+}
+.urbanNewsText a h3{
+    font-weight: bold;
+}
+
+.urbanNewsText small{
+    color: red;
+}
+.urbanNewsImg{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+
+.ubernNewsSection{
+    min-height: 200px;
+    margin: 20px 30px;
+}
+
+.TopUrbanNewsContainer{
+    background: silver;
+    padding: 50px;
+}
+
+.mainUrbanNewsContainer{  
+    padding: 50px 20px 20px 20px;
+    
+}
+.mainUrbanNewsCircle{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+}
+.mainUrbanNewsCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    padding: 10px;
+    background: white;
+}
+.mainUrbanNewsText {
+    padding: 10px;
+}
+.mainUrbanNewsText h4{
+    font-size: 25px;
+}
+.mainUrbanNewsText p{
+    font-size: 15px;
+}
+.mainUrbanNewsText small{
+    color: red;
+}
+
+.mainUrbanNewsImg{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 20px;
+
+}
+.mainUrbanNewsNextSection{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: space-around;
+    padding: 10px;
+}
+
+.mnunLeft{
+    padding: 10px;
+    background: gray;
+    border-radius: 50%;
+}
+
+.mnunNum{
+    padding: 10px;
+    background: gray;
+    border-radius: 50px;
+    
+}
+.mnunNum h5{
+    font-stretch: 20px;
+}
+
+.mnunRight{
+    padding: 10px;
+    background: gray;
+    border-radius: 50%;
+}

@@ -1,0 +1,64 @@
+{% load static %}
+
+<!--footerSection  -->
+  <section class="footeSection">
+    <div class="footerLogo">
+        <img src="{% static 'img/ECW.png' %}" alt="" width="200px">
+    </div>
+
+    <footer>
+        <div class="footerLinks">
+            <a href="{% url 'News' %}">News</a>
+            <a href="{% url 'sports' %}">Sports</a>
+            <a href="{% url 'Entertainment' %}">Entertainment</a>
+           
+            <a href="{% url 'Politics' %}">Politics</a>
+            <a href="{% url 'TechNews' %}">TechNews</a>
+            <a href="{% url 'Business' %}">Business</a>
+            <a href="{% url 'Podcast' %}">PodCat</a>
+            
+        </div>
+        
+
+        <div class="footerForm">
+            <form action="">
+                <input type="search" placeholder="Search">
+                <button><i class="bi bi-search"></i></button>
+            </form>
+
+            <button><i class="bi bi-envelope"></i>Subscribe</button>
+
+            <div class="footerSocialIcons">
+                <div>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="bottomFooter">
+        <span>
+            echojournal.com © 2024- 2024 echojournal Nigeria Limited
+
+        </span>
+        <div class="bottomFooterLinks">
+            <a href="">About Us</a>
+            <a href="">Advertise With us</a>
+            <a href="">Contact</a>
+        </div>
+        <div></div>
+    </div>
+
+</section>

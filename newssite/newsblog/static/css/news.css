@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+
+.topBodyNewsSection{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 90%;
+    margin: 0 auto;
+}
+.topLeftNewsContainer{
+    padding: 20px;
+}
+.newsContainer{
+    margin: 20px 0px;
+    border-bottom: .5px solid silver;
+    border-left: .5px solid silver;
+    padding: 10px;
+    position: relative;
+}
+.newsContainer small{
+    color: red;
+    font-style: italic;
+}
+.newsContainer small h3{
+    font-weight: bold;
+}
+.newsCircle{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+}
+.newsCenterCardContainer{
+    background: silver;
+}
+.newsCenterContainer h1{
+    font-weight: bold;
+    padding: 20px;
+}
+.newsCenterHeadingImgContainer{
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.newsRightContainer{
+    padding: 20px;
+}
+
+.newsCardContainer{
+    display: grid;
+    grid-template-columns:80% 20%;
+    margin: 20px 0px;
+    border-bottom: 1px solid silver;
+    padding: 10px 0px;
+}
+.newsText a h3{
+    font-weight: bold;
+}
+
+.newsText small{
+    color: red;
+}
+.newsImg{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+
+.newsSection{
+    min-height: 200px;
+    margin: 20px 30px;
+}
+
+.TopMainNewsContainer{
+    background: silver;
+    padding: 50px;
+}
+
+.mainNewsContainer{  
+    padding: 50px 20px 20px 20px;
+    
+}
+.mainNewsCircle{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+}
+.mainNewsCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    padding: 10px;
+    background: white;
+}
+.mainNewsText {
+    padding: 10px;
+}
+.mainNewsText h4{
+    font-size: 25px;
+}
+.mainNewsText p{
+    font-size: 15px;
+}
+.mainNewsText small{
+    color: red;
+}
+
+.mainNewsImg{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 20px;
+
+}
+.mainNewsNextSection{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: space-around;
+    padding: 10px;
+}
+
+.mnnsLeft{
+    padding: 10px;
+    background: gray;
+    border-radius: 50%;
+}
+
+.mnnsNum{
+    padding: 10px;
+    background: gray;
+    border-radius: 50px;
+    
+}
+.mnnsNum h5{
+    font-stretch: 20px;
+}
+
+.mnnsRight{
+    padding: 10px;
+    background: gray;
+    border-radius: 50%;
+}

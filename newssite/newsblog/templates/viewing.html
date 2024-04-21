@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+    <section class="viewingSection">
+        
+        <div class="viewingContainer">
+
+            <div class="viewingHeadingContainer">
+                <h1>
+                    {{new.title}}
+                </h1>
+                <small>
+                    {{new.created_at}}
+                </small>
+            </div>
+
+            <div class="viewingImgCardContainer">
+                <img src="{{ new.images.url }}" alt="" width="100%">
+                
+            </div>
+
+            <div class="viewingContentContainer">
+
+                <p>{{new.content}}</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SEyL9bJjAQE?si=cMJkVeoKOk9OsYAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            </div>
+        </div>
+
+        <div class="viewingAdvertContainer">
+            <p>ADVERTISMENT</p>
+        </div>
+
+    </section>
+
+{% endblock%}

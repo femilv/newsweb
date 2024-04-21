@@ -1,0 +1,46 @@
+  {% load static%}  
+<!-- header section -->
+<section class="headerSection">
+    <h3>Advertise With us</h3>
+    <p>Thursday, March 07, 2024</p>
+</section>
+<!-- group Nav Section -->
+<section class="grpNavContainer">
+    <section class="SocialHeaderContainer">
+        <div class="socialMediaIcons">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-telegram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-tiktok"></i></a>
+            <a href=""><i class="bi bi-whatsapp"></i></a>
+            
+        </div>
+        <div class="SocialHeaderLogoContainer">
+            <img src="{% static 'img/Ecjornal.png' %}" alt="" width="150px">
+        </div>
+        <div class="socialHeaderRightContainer">
+            <a href="">
+                <i class="bi bi-search"></i>
+            </a>
+            <a href="">
+                <i class="bi bi-collection-play"></i>
+                <span>Videos</span>
+            </a>
+        </div>
+    </section>
+        <section class = "categoryLabels">
+            <nav class="homeNav">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'News' %}">News</a>
+                <a href="{% url 'sports' %}">Sports</a>
+                <a href="{% url 'Entertainment' %}">Entertainment</a>
+                <a href="{% url 'Politics' %}">Politics</a>
+                <a href="{% url 'TechNews' %}">TechNews</a>
+                <a href="{% url 'Business' %}">Business</a>
+                <a href="{% url 'Podcast' %}">Podcast</a>
+                
+            </nav>
+        </section>
+</section>

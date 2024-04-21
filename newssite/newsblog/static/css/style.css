@@ -1,0 +1,670 @@
+/* global variable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+
+}
+
+a{
+    color: black;
+}
+/* header section */
+.headerSection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background: black;
+    color: white;
+    padding: 5px 50px;
+    font-size: 14px;
+}
+
+.headerSection h3 {
+    border-right: 1px solid white;
+    padding: 0px 10px;
+}
+
+/*group Nav Container  */
+.grpNavContainer{
+    position: sticky;
+    top: 0;
+    z-index: 98765432;
+    background: white;
+    width: 100%;
+}
+
+.SocialHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+
+}
+
+.socialMediaIcons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.socialMediaIcons i {
+    font-size: 20px;
+}
+
+.socialHeaderRightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.socialHeaderRightContainer a:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.socialHeaderRightContainer a:nth-child(2) {
+    border-radius: 20px;
+    padding: 10px 50px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+
+}
+/* Home Nav Container */
+
+.homeNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 15px;
+
+}
+/* top body section */
+.topBodySection{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 90%;
+    margin: 0 auto;
+}
+.topLeftContainer{
+    padding: 20px;
+}
+.latestNewsContainer{
+    margin: 20px 0px;
+    border-bottom: .5px solid silver;
+    border-left: .5px solid silver;
+    padding: 10px;
+    position: relative;
+}
+.latestNewsContainer small{
+    color: red;
+    font-style: italic;
+}
+.latestNewsContainer small h3{
+   font-weight: bold;
+}
+.LatestCircle{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+}
+
+.centerCardContainer{
+    background: silver;
+}
+.CenterHeadingImgContainer{
+    height: 400px;
+    overflow: hidden;
+}
+.topCenterContainer h1{
+    font-weight: bold;
+    padding: 20px;
+}
+.topRightContainer{
+    padding: 20px;
+}
+.topNewsImg{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.topNewsCardContainer{
+    display: grid;
+    grid-template-columns:80% 20%;
+    margin: 20px 0px;
+    border-bottom: 1px solid silver;
+    padding: 10px 0px;
+}
+.topNewsText a h3{
+    font-weight: bold;
+}
+.topNewsText small {
+    color: red;
+}
+/* Advertisment container */
+.advertContainer{
+    width: 90%;
+    margin: 0 auto;
+    background: silver;
+    height: 50vh;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0px;
+    letter-spacing: 5px;
+}
+/* top video section */
+.topVideoSection{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: silver; */
+}
+.topVideoHeader{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+    margin: 20px 10px;
+}
+.topHeadBox{
+    width: 15px;
+    height: 15px;
+    background: red;
+    
+}
+
+.topVideoHeader hr{
+    width: 80%;
+
+}
+.topVideoCardContainer{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 0px 10px 0px 250px;
+}
+
+.topVideoCard{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    flex-shrink: 0;
+    
+}
+
+.topVideoOverlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.topVideoCard h5{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    z-index: 8765;
+    padding: 20px;
+}
+
+.topVideoSection a{
+    background: red;
+    color: white;
+    padding: 5px 40px;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+/* Metro section */
+
+.metroSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+.metroHeader{ 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+    margin: 5px 5px;
+}
+.metroHeadBox{
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+
+.metroHeader hr{
+    width: 80%;
+
+}
+.metroLeftContainer{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    min-height: 50vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.metroSide1{
+    width: 250px;
+    border-bottom: .5px solid silver;
+    border-left: .5px solid silver;
+    padding: 10px;
+}
+.metroSide1Img{
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+.metroSide2Card{
+    width: 250px;
+    display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+   margin: 10px 10px;
+   border-bottom: .5px solid silver;
+   border-left: .5px solid silver;
+}
+
+.metroSide2Header{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+}
+.metroLeftContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* Business section */
+
+
+.businessSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    padding: 50px 0px 50px 0px ;
+}
+.businessHeader{
+    
+   gap: 20px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 80%;
+   gap: 10px;
+   margin: 20px 10px;
+}
+.businessHeadBox{
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+
+.businessHeader hr{
+    width: 80%;
+}
+
+.businessLeftContainer{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    min-height: 50vh;
+    width: 90%;
+    margin: 0 auto;
+}
+.businessSide1{
+    width: 250px;
+    border-bottom: .5px solid silver;
+    border-left: .5px solid silver;
+    padding: 10px;
+}
+.businessSide1Img{
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.businessSide2Card{
+    width: 250px;
+    display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+   margin: 10px 0px;
+   border-bottom: .5px solid silver;
+   border-left: .5px solid silver;
+}
+.businessSide2Header{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.businessLeftContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+/* politics section */
+.politicsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px 0px 10px 0px;
+}
+.politicsHeader{
+    gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+    margin: 20px 10px;
+}
+
+.politicsHeadBox{
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+
+.politicsHeader hr{
+    width: 80%;
+}
+
+.politicsLeftContainer{
+    display: flex;
+    /* grid-template-columns: 80% 20%; */
+    min-height: 50vh;
+    width: 90%;
+    margin: 0 auto;
+}
+.politicsSide1{
+    width: 250px;
+    border-bottom:.5px solid silver;
+    border-left:.5px solid silver;
+    padding: 10px;
+}
+.politicsSide1Img{
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.politicsSide2Card{
+    width: 250px;
+    display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+   margin: 10px 0px;
+   border-bottom:.5px solid silver;
+   border-left:.5px solid silver;
+}
+.politicsSide2Header{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.politicsLeftContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* sport Section */
+
+.sportsSection{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px 0px 10px 0px;
+    width: 90%;
+    margin: 0 auto;
+}
+.sportsHeader{
+    gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+    margin: 20px 10px;
+}
+
+.sportsHeadBox{
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+.sportsHeader hr{
+    width: 80px;
+}
+
+.sportCardContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+/* footer Section */
+.footeSection{
+    background: black;
+    padding: 50px 0px;
+}
+.footerLogo{
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0px 80px;
+}
+
+
+.footerLinks{
+    display: grid;
+    gap: 10px;
+}
+.footerLinks a{
+    color: white;
+}
+.footerForm form input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    outline: none;
+    border: none;
+}
+
+.footerForm form button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    margin-left: -40px;
+}
+.footerForm > button{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+.footerSocialIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0px;
+}
+.footerSocialIcons div{
+    background: silver;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.bottomFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    margin: 50px 0px;
+}
+
+.bottomFooter a{
+    color: white;
+}
+.bottomFooterLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+@media (max-width: 800px) {
+    .headerSection {
+        flex-direction: column;
+        padding: 5px 20px; /* Reduced padding */
+    }
+
+    .headerSection h3 {
+        border-right: none;
+        padding-bottom: 10px;
+    }
+
+    .SocialHeaderContainer{
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .socialHeaderRightContainer {
+        display: none;
+    }
+
+    .homeNav {
+        gap: 20px; /* Reduced gap */
+        padding: 15px 20px; /* Reduced padding */
+    }
+
+    .topBodySection {
+        grid-template-columns: 1fr; /* Stack grid items */
+    }
+
+    .topNewsCardContainer, .metroSide2Card, .businessSide2Card, .politicsSide2Card {
+        grid-template-columns: 1fr; /* Adjust grid for single column layout */
+    }
+
+    .topVideoCardContainer, .metroLeftContainer, .businessLeftContainer, .politicsLeftContainer {
+        flex-direction: column;
+    }
+
+    .sportsSection {
+        /* Adjust the flex direction to column if it's not already, and reduce the gap */
+        flex-direction: column;
+        gap: 20px; /* Smaller gap for smaller screens */
+        padding: 5px 0; /* Slightly reduce padding */
+        width: 100%; /* Use full width for smaller screens */
+    }
+
+    .sportsHeader {
+        /* Adjust layout to better fit smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center; /* Center align items for a cleaner look on small screens */
+        width: 90%; /* Adjust width to give more room on the sides */
+        gap: 5px; /* Reduce gap to save space */
+        margin: 10px auto; /* Adjust margin for better centering and spacing */
+    }
+
+    .sportsHeadBox {
+        /* Adjustments might not be needed, but you can resize if necessary */
+        width: 10px; /* Optionally make slightly smaller */
+        height: 10px; /* Optionally make slightly smaller */
+    }
+
+    .sportsHeader hr {
+        width: 60px; /* Adjust the width of the horizontal rule for consistency */
+    }
+
+    .sportCardContainer {
+        /* Update the layout to better suit a smaller viewport */
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Ensure cards are centrally aligned */
+        gap: 10px; /* Reduce gap to save space */
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerForm form input {
+        width: 100%; /* Full width */
+    }
+}

@@ -1,0 +1,408 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+<!-- top Body Section -->
+    <section class="topBodySection">
+        <div class="topLeftContainer">
+            <h3>Latest News </h3>
+            {% for new in latest_news %}
+            <div class="latestNewsContainer">
+                <a href="{% url 'news_detail' new_id=new.id %}">
+                    <div class="LatestCircle"></div>
+                    <small>{{new.created_at}}</small>
+                    <h3>{{new.title}}</h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="topCenterContainer">
+          
+            {% for sing in sing_news %}
+            <div class="centerCardContainer">
+                <a href="{% url 'news_detail' new_id=sing.id %}">     
+                    <div class="CenterHeadingImgContainer">
+                        <img src="{{sing.images.url}}" alt="{{sing.title}}" width="100%">
+                    </div>
+                    <h1>{{sing.title}}</h1>
+                </a>
+            </div>
+            {% endfor %}      
+        </div>
+       
+        <div class="topRightContainer">
+            <h2>Top News</h2>
+
+            <div class="topNewsCardContainer">
+                {% for new in top_news %}
+                <div class="topNewsText">
+                    <a href="{% url 'news_detail' new_id=new.id %}"><h3>{{new.title}}</h3></a>
+                    
+                    <small>{{new.created_at}}</small>
+                </div>
+                <div class="topNewsImg">
+                    <img src="{{new.images.url}}" alt="" width="100%">
+                </div>
+                {% endfor %}
+            </div>
+          
+        </div>
+    </section>
+<!-- Advertisment -->
+    <section class="advertsection">
+        <a href="">
+            <div class="advertContainer">
+                <small>ADVERTISMENT</small>
+            </div>
+        </a>
+    </section>
+<!-- Top Video Section -->
+    <!-- <section class="topVideoSection">
+        <div class="topVideoHeader">
+            <div class="topHeadBox"></div>
+            <h3>Top Videos</h3>
+            <hr>
+        </div>
+
+        <div class="topVideoCardContainer">
+
+            <div class="topVideoCard">
+                <img src="./assests/mango.jpg" alt="" width="100%"> 
+                <a href="">
+                    <h5>Did you know a man who locked himself up for 55 years over the fear of a woman?</h5>
+                    <div class="topVideoOverlay"></div>
+                </a>
+            </div>
+            <div class="topVideoCard">
+                <img src="./assests/mango.jpg" alt="" width="100%">
+                <a href="">
+                    <h5>Did you know a man who locked himself up for 55 years over the fear of a woman?</h5>
+                    <div class="topVideoOverlay"></div>
+                </a>
+            </div>
+            <div class="topVideoCard">
+                <img src="./assests/mango.jpg" alt="" width="100%">
+                <a href="viewing.html">
+                    <h5>Did you know a man who locked himself up for 55 years over the fear of a woman?</h5>
+                    <div class="topVideoOverlay"></div>
+                </a>
+            </div>
+            <div class="topVideoCard">
+                <img src="./assests/mango.jpg" alt="" width="100%">
+                <a href="viewing.html">
+                    <h5>Did you know a man who locked himself up for 55 years over the fear of a woman?</h5>
+                    <div class="topVideoOverlay"></div>
+                </a>
+            </div>
+          
+        </div>
+
+        <a href="">View More</a>
+
+    </section> -->
+
+<!--  metro Section -->
+    <section class="metroSection">
+
+        <div class="metroHeader">
+            <div class="metroHeadBox"></div>
+            <h3>Entertainment</h3>  
+            <hr>   
+        </div>
+
+        <div class="metroLeftContainer">
+           
+            {% for ent in ent_news%}
+            <div class="">
+                <a href="{% url 'news_detail' new_id=ent.id %}">
+                    <div class="metroSide1">
+                        <div class="metroSide1Img">
+                            <img src="{{ent.images.url}}" alt="" width="100%">
+                        </div>
+                        <h3>{{ent.title}}</h3>
+                        
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+            <div class="metroSide2Container">
+                {% for enter in ent_cont %}
+               <a href="{% url 'news_detail' new_id=enter.id %}">
+                <div class="metroSide2Card">
+                    <div class="metroSide2Header">
+                        <img src="{{enter.images.url}}" alt="" width="100%">
+                    </div>
+                    <h4>{{enter.title}}</h4>
+                </div>
+               </a>
+               {% endfor %}
+            </div>
+            <div class="metroSide2Container">
+                {% for enter in ent_cont2 %}
+               <a href="{% url 'news_detail' new_id=enter.id %}">
+                <div class="metroSide2Card">
+                    <div class="metroSide2Header">
+                        <img src="{{enter.images.url}}" alt="" width="100%">
+                    </div>
+                    <h4>{{enter.title}}</h4>
+                </div>
+               </a>
+               {% endfor %}
+            
+            </div>
+
+            
+        </div>
+
+    </section>
+<!--  advert section -->
+    <section class="advertsection">
+        <a href="">
+            <div class="advertContainer">
+                <small>ADVERTISMENT</small>
+            </div>
+        </a>
+    </section>
+
+<!-- business Section -->
+    <section class="businessSection">
+        <div class="businessHeader">
+            <div class="businessHeadBox"></div>
+            <h3>Business</h3>
+            <hr>
+        </div>
+        
+        <div class="businessLeftContainer">
+
+            {% for bus in bus_news %}
+            <div class="">
+               <a href="{% url 'news_detail' new_id=bus.id %}">
+                    <div class="businessSide1">
+                        <div class="businessSide1Img">
+                            <img src="{{bus.images.url}}" alt="" width="100%">
+                        </div>
+                        <h3>{{bus.title}}</h3>
+                        
+                    </div>
+               </a>
+            </div>
+            {% endfor %}
+
+            <div class="businessSide2Container">    
+            {% for buss in bus_cont%}
+             <a href="{% url 'news_detail' new_id=buss.id %}">
+                <div class="businessSide2Card">
+                    <div class="businessSide2Header">
+                        <img src="{{buss.images.url}}" alt="" width="100%">
+                    </div>
+                    <h4>{{buss.title}}</h4>
+                </div> 
+             </a>
+             {% endfor %}                               
+            </div>
+
+            <div class="businessSide2Container">
+            {% for buss in bus_cont2%}
+             <a href="{% url 'news_detail' new_id=buss.id %}">
+                <div class="businessSide2Card">
+                    <div class="businessSide2Header">
+                        <img src="{{buss.images.url}}" alt="" width="100%">
+                    </div>
+                    <h4>{{buss.title}}</h4>
+                </div> 
+             </a> 
+             {% endfor %}         
+            </div>
+           
+            
+        </div>
+    </section>
+
+    <!--  advert section -->
+    <section class="advertsection">
+        <a href="">
+            <div class="advertContainer">
+                <small>ADVERTISMENT</small>
+            </div>
+        </a>
+    </section>
+
+<!-- politics Section -->
+    <section class="politicsSection">
+        <div class="politicsHeader">
+            <div class="politicsHeadBox"></div>
+            <h3>Politics</h3>
+            <hr>
+        </div>
+        
+        <div class="politicsLeftContainer">
+
+            <div class="">
+                {% for pol in pol_news %}
+                <a href="viewing.html">
+                    <div class="politicsSide1">
+                        <div class="politicsSide1Img">
+                            <img src="{{pol.images.url}}" alt="" width="100%">
+                        </div>
+                        <h3>{{pol.title}}</h3>
+                        
+                    </div>
+                </a>
+                {% endfor%}
+            </div>
+            <div class="politicsSide2Container">
+                {%for politic in poli_cont %}
+                 <a href="{% url 'news_detail' new_id=politic.id %}">
+                    <div class="politicsSide2Card">
+                        <div class="politicsSide2Header">
+                            <img src="{{politic.images.url}}" alt="" width="100%">
+                        </div>
+                        <h4>{{politic.title}}</h4>
+                    </div> 
+                 </a>
+                 {% endfor %}
+            </div>
+            <div class="politicsSide2Container">
+                {%for politic in poli_cont2 %}
+                 <a href="{% url 'news_detail' new_id=politic.id %}">
+                    <div class="politicsSide2Card">
+                        <div class="politicsSide2Header">
+                            <img src="{{politic.images.url}}" alt="" width="100%">
+                        </div>
+                        <h4>{{politic.title}}</h4>
+                    </div> 
+                 </a>
+                 {% endfor %}
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <!-- sport Section
+     -->
+    <section class="sportsSection">
+        <div class="sportsHeader">
+            <div class="sportsHeadBox"></div>
+            <h3>Sports</h3>
+            <hr>
+        </div>
+        
+        <div class="sportCardContainer">
+            {% for sport in sport_cont%}
+            <a href="{% url 'news_detail' new_id=sport.id %}">
+                <div class="metroSide2Card">
+                    <div class="metroSide2Header">
+                        <img src="{{sport.images.url}}" alt="" width="100%">
+                    </div>
+                    <h4>{{sport.title}}</h4>
+                </div>
+            </a>
+            {% endfor%}
+        </div>
+
+    </section>
+
+    <!-- Subfooter section -->
+    <!-- <section class="subFooterSection">
+        <div class="subFootercard">
+            <h3>Special Features</h3>
+            <a href="viewing.html">
+                <div class="subFooterCardHeader">
+                    <img src="./assests/mango.jpg" alt="" width="100%">
+                </div>
+            </a>
+            <div class="subFooterCardBody">
+                <a href="viewing.html">
+                    <h4>Northern communities fret as rising food prices bite harder</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>How craze for popularity drives risky pranks among desperate content creators</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>Jobseekers eyeing care jobs abroad lose millions to Canada-based Nigerian</h4>
+                </a>
+            </div>
+            <div class="subFooterCardFooter">
+                <a href="viewing.html">More Special Features</a>
+            </div>
+        </div>
+        <div class="subFootercard">
+            <h3>Special Features</h3>
+            <a href="viewing.html">
+                <div class="subFooterCardHeader">
+                    <img src="./assests/mango.jpg" alt="" width="100%">
+                </div>
+            </a>
+            <div class="subFooterCardBody">
+                <a href="viewing.html">
+                    <h4>Northern communities fret as rising food prices bite harder</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>How craze for popularity drives risky pranks among desperate content creators</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>Jobseekers eyeing care jobs abroad lose millions to Canada-based Nigerian</h4>
+                </a>
+            </div>
+            <div class="subFooterCardFooter">
+                <a href="viewing.html">More Special Features</a>
+            </div>
+        </div>
+        <div class="subFootercard">
+            <h3>Special Features</h3>
+            <a href="viewing.html">
+                <div class="subFooterCardHeader">
+                    <img src="./assests/mango.jpg" alt="" width="100%">
+                </div>
+            </a>
+            <div class="subFooterCardBody">
+                <a href="viewing.html">
+                    <h4>Northern communities fret as rising food prices bite harder</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>How craze for popularity drives risky pranks among desperate content creators</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>Jobseekers eyeing care jobs abroad lose millions to Canada-based Nigerian</h4>
+                </a>
+            </div>
+            <div class="subFooterCardFooter">
+                <a href="viewing.html">More Special Features</a>
+            </div>
+        </div>
+        <div class="subFootercard">
+            <h3>Special Features</h3>
+            <a href="viewing.html">
+                <div class="subFooterCardHeader">
+                    <img src="./assests/mango.jpg" alt="" width="100%">
+                </div>
+            </a>
+            <div class="subFooterCardBody">
+                <a href="viewing.html">
+                    <h4>Northern communities fret as rising food prices bite harder</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>How craze for popularity drives risky pranks among desperate content creators</h4>
+                </a>
+
+                <a href="viewing.html">
+                    <h4>Jobseekers eyeing care jobs abroad lose millions to Canada-based Nigerian</h4>
+                </a>
+            </div>
+            <div class="subFooterCardFooter">
+                <a href="viewing.html">More Special Features</a>
+            </div>
+        </div>
+    </section> -->
+
+{% endblock %}

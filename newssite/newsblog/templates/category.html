@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+
+    <!-- top Body Section -->
+    <section class="topBodySection">
+        <div class="topLeftContainer">
+            <h3>{{category.name}} </h3>
+            {% for left in category_left %}
+            <div class="latestNewsContainer">
+                <a href="{% url 'news_detail' new_id=left.id %}">
+                    <div class="LatestCircle"></div>
+                    <small>{{left.created_at}}</small>
+                    <h3>{{left.title}}</h3>
+                </a>
+            </div>
+            {% endfor%}
+        </div>
+
+        
+        <div class="topCenterContainer">
+            
+            <div class="centerCardContainer">
+                {% for cen in cent_news%}
+                <a href="">     
+                    <div class="CenterHeadingImgContainer">
+                        <img src="{{cen.images.url}}" alt="" width="100%">
+                    </div>
+                    <h1>{{cen.title}}</h1>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+       
+        <div class="topRightContainer">
+            {% for right in category_right %}
+            <div class="topNewsCardContainer">
+                <div class="topNewsText">
+                    <a href="{% url 'news_detail' new_id=right.id %}"><h3>{{right.title}}</a>           
+                    <small>{{category.name}}</small>
+                </div> 
+                <div class="topNewsImg">
+                    <img src="{{right.images.url}}" alt="" width="100%">
+                </div>
+            </div>
+            {% endfor%}
+           
+        </div>
+    </section>
+<!-- Advertisment -->
+    <section class="advertsection">
+        <a href="">
+            <div class="advertContainer">
+                <small>ADVERTISMENT</small>
+            </div>
+        </a>
+    </section>
+
+    <!-- news Section -->
+    <section class="newsSection">
+        <div class="mainNewsAdvertContainer">  
+            <!-- <a href="">
+            <div class="advertContainer">
+                <small>ADVERTISMENT</small>
+            </div>
+            </a> -->
+        </div>
+        <div class="TopMainNewsContainer">
+            
+            <div>
+                {% for new in page_obj%}
+                <div class="mainNewsContainer">
+                    <a href="{% url 'news_detail' new_id=new.id %}">
+                        <div class="mainNewsCircle"></div>
+                        <div class="mainNewsCardContainer">
+                            <div class="mainNewsText">
+                            
+                                <h4>{{new.title}}</h4>
+                                <!-- <p>{{new.content}}</p> -->
+                                <small>{{new.created_at}}</small>
+                            </div>
+            
+                            <div class="mainNewsImg">
+                                <img src="{{new.images.url}}" alt="" width="100%" >
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              
+                {% endfor %}
+            </div>
+
+                
+                    
+        <div class="mainNewsNextSection">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">
+                    <div class="mnnsLeft"><i class="bi bi-chevron-double-left"></i></div>
+                </a>
+            {% endif %}
+
+            <div class="mnnsNum"><h5>
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </h5></div>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">
+                    <div class="mnnsRight"><i class="bi bi-chevron-double-right"></i></div>
+                </a>
+            {% endif %}
+        </div>
+           
+        </div>
+    </section>
+
+
+{% endblock %}
